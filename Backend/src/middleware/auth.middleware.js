@@ -3,7 +3,7 @@ import User from "../features/users/user.model.js";
 export const authenticateUser = async (req, res, next) => {
   try {
     // 1. Read JWT from HttpOnly cookie
-    const token = req.cookies?.corridorGate_token;
+    const token = req.cookies?.token;
 
     if (!token) {
       return res.status(401).json({

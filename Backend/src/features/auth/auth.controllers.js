@@ -33,7 +33,7 @@ export const SignUp = async (req, res) => {
     );
 
     res.cookie(
-      "corridorGate_token",
+      jwtUtils.COOKIE_NAME,
       token,
       jwtUtils.cookieOptions
     );
@@ -63,7 +63,7 @@ export const Login = async (req, res) => {
     );
 
     res.cookie(
-      "corridorGate_token",
+      jwtUtils.COOKIE_NAME,
       token,
       jwtUtils.cookieOptions
     );
@@ -87,7 +87,7 @@ export const getCurrentUser = async (req, res) => {
 
 export const Logout = async (req, res) => {
   res.clearCookie(
-    "corridorGate_token",
+    jwtUtils.COOKIE_NAME,
     jwtUtils.clearCookieOptions
   );
 

@@ -1,7 +1,8 @@
+
 import config from "../config/config.js";
 import jwt from "jsonwebtoken";
 
-const COOKIE_NAME = "corridorGate_token";
+export const COOKIE_NAME = "token";
 
 const isProduction = config.NODE_ENV === "production";
 
@@ -24,19 +25,15 @@ export const generateToken = (id, role) => {
 };
 
 export const verifyToken = (token) => {
-  return jwt.verify(
-    token,
-    config.JWT_SECRET,
-    {
-      algorithms: ["HS256"],
-    }
-  );
+  return jwt.verify(token, config.JWT_SECRET, {
+    algorithms: ["HS256"],
+  });
 };
 
 export const cookieOptions = {
   httpOnly: true,
   secure: isProduction,
-  sameSite: "lax",
+  sameSite: isProduction ? "none" : "lax",
   maxAge: 7 * 24 * 60 * 60 * 1000,
   path: "/",
 };
@@ -44,6 +41,6 @@ export const cookieOptions = {
 export const clearCookieOptions = {
   httpOnly: true,
   secure: isProduction,
-  sameSite: "lax",
+  sameSite: isProduction ? "none" : "lax",
   path: "/",
 };
