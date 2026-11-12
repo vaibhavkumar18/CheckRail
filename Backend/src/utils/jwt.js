@@ -32,15 +32,15 @@ export const verifyToken = (token) => {
 
 export const cookieOptions = {
   httpOnly: true,
-  secure: isProduction,
-  sameSite: isProduction ? "none" : "lax",
+  secure: true,
+  sameSite: "none",
   maxAge: 7 * 24 * 60 * 60 * 1000,
   path: "/",
 };
 
 export const clearCookieOptions = {
   httpOnly: true,
-  secure: isProduction,
-  sameSite: isProduction ? "none" : "lax",
+  secure: true,
+  sameSite: "none",
   path: "/",
 };
