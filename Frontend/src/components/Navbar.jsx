@@ -27,11 +27,11 @@ export default function Navbar() {
     "Account";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-[#002990] bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 items-center justify-between px-6 sm:px-8 lg:px-12">
         <div className="flex items-center gap-8">
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="font-display text-[20px] font-medium tracking-tight text-slate-900">
+            <span className="font-display text-[25px] bg-gradient-to-r from-[#002990] via-[#0089FA] to-[#5CC7FA] bg-clip-text text-transparent font-semibold tracking-tight text-slate-900">
               CheckRail
             </span>
           </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
               <Link
                 to="/dashboard"
-                className="rounded-[3px] bg-slate-950 px-4 py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-slate-800"
+                className="rounded-[3px] bg-slate-950 px-4 py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-slate-800 bg-gradient-to-r from-[#5CC7FA] via-[#0089FA] to-[#002990] "
               >
                 Go to Dashboard
               </Link>

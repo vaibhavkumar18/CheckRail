@@ -33,7 +33,7 @@ export default function Footer() {
             <a href="#home" className="flex items-center gap-2.5">
               
 
-              <span className="font-display text-base font-medium tracking-tight text-slate-900">
+              <span className="font-display text-xl font-medium tracking-tight bg-gradient-to-r from-[#002990] via-[#0089FA] to-[#5CC7FA] bg-clip-text text-transparent font-semibold tracking-tight text-slate-900">
                 CheckRail
               </span>
             </a>

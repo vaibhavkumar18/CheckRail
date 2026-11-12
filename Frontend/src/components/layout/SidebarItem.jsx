@@ -110,8 +110,8 @@ export default function SidebarItem({
             className={({ isActive }) =>
                 `group relative flex min-h-[46px] items-center gap-3 rounded-lg px-3.5 py-2.5 transition-all duration-200 ${
                     isActive
-                        ? "bg-blue-50 text-blue-700"
-                        : "text-slate-600 hover:bg-white/70 hover:text-slate-900"
+                        ? "bg-blue-50 text-[#0089FA]"
+                        : "text-white hover:bg-[#5CC7FA] hover:text-black"
                 } ${collapsed ? "justify-center px-2" : ""}`
             }
         >

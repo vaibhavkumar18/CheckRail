@@ -10,7 +10,7 @@ export default function SidebarGroup({
     return (
         <div className="mb-6">
             {!collapsed && (
-                <p className="mb-2 px-3.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">
+                <p className="mb-2 px-3.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white">
                     {title}
                 </p>
             )}

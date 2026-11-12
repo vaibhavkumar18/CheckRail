@@ -124,8 +124,7 @@ const sandboxRows = [
     method: "POST",
     response: "200 OK",
     time: "310ms",
-    evidence:
-      "Capture validated; webhook signature header SHA256 verified.",
+    evidence: "Capture validated; webhook signature header SHA256 verified.",
   },
   {
     provider: "Hyperwallet v4",
@@ -169,7 +168,7 @@ function SectionHeading({ eyebrow, title, description, className = "" }) {
 
 function HeroPipeline() {
   return (
-    <div className="rounded-[3px] border border-slate-200 bg-[#fbfcfd] p-5 sm:p-7">
+    <div className="rounded-[3px] border border-[#002990] bg-[#fbfcfd] p-5 sm:p-7">
       <p className="mb-6  text-[12px] font-normal uppercase tracking-wider text-black-500">
         Readiness Architecture Pipeline
       </p>
@@ -180,10 +179,7 @@ function HeroPipeline() {
           ["02 / INPUT", "Country Rules", "Statutory & rails"],
           ["03 / INPUT", "Sandbox Telemetry", "Runtime execution"],
         ].map(([number, title, description]) => (
-          <div
-            key={number}
-            className="border border-slate-200 bg-white p-3.5"
-          >
+          <div key={number} className="border border-slate-200 bg-white p-3.5">
             <p className=" text-[10px] text-slate-400">{number}</p>
             <p className="mt-1 text-[12px] font-semibold text-slate-900">
               {title}
@@ -214,9 +210,9 @@ function HeroPipeline() {
         <div className="h-6 w-px bg-slate-300" />
       </div>
 
-      <div className="flex flex-col justify-between gap-3 rounded-[1px] bg-slate-900 p-4 text-white sm:flex-row sm:items-center">
+      <div className="flex flex-col justify-between gap-3 rounded-[1px] bg-[#0089FA] p-4 text-white sm:flex-row sm:items-center">
         <div>
-          <p className=" text-[10px] uppercase tracking-wider text-slate-400">
+          <p className=" text-[10px] uppercase tracking-wider text-black-400">
             Output Artifact
           </p>
           <p className="mt-1 text-[13px] font-normal">
@@ -224,7 +220,7 @@ function HeroPipeline() {
           </p>
         </div>
 
-        <span className="w-fit rounded-[1px] border border-slate-700 bg-slate-800 px-2 py-1 text-[10px] text-emerald-400">
+        <span className="w-fit rounded-[1px] border border-slate-700 bg-black px-2 py-1 text-[10px] text-white">
           READY_WITH_CONDITIONS
         </span>
       </div>
@@ -239,24 +235,28 @@ function HeroPipeline() {
 
 export default function HomePage() {
   const isAuthenticated = useSelector(
-  (state) => state.auth.status === "authenticated"
-);
+    (state) => state.auth.status === "authenticated",
+  );
 
-const assessmentPath = isAuthenticated
-  ? "/dashboard"
-  : "/auth/register";
+  const assessmentPath = isAuthenticated ? "/dashboard" : "/auth/register";
   return (
     <main id="home" className="w-full flex-1 bg-white text-slate-900">
       {/* HERO */}
       <section className="border-b border-slate-200/80 bg-white py-20 md:py-24">
         <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-center gap-12 px-6 sm:px-10 lg:grid-cols-12 lg:gap-14 lg:px-[5vw]">
           <div className="flex max-w-xl flex-col gap-6 lg:col-span-6">
-            <p className="flex items-center gap-2  text-[11px] font-medium uppercase tracking-wider text-slate-500">
-              
-              Payment Expansion Intelligence
-            </p>
+            <div className="top-heading flex space-x-3">
+              <img
+                src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/PayPal_2024_%28Icon%29.svg/250px-PayPal_2024_%28Icon%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                className="h-8 w-8"
+                alt=""
+              />
+              <p className="flex items-center gap-2  text-[11px] font-medium uppercase tracking-wider text-slate-500">
+                Payment Expansion Intelligence
+              </p>
+            </div>
 
-            <h1 className="font-display text-[50px] font-normal leading-[1.08] tracking-[-0.035em] text-black-950 sm:text-[52px] lg:text-[52px]">
+            <h1 className="font-display text-[50px] font-light leading-[1.08] tracking-[-0.035em] text-black-950 sm:text-[52px] lg:text-[52px]">
               Expand Across Borders With Evidence, Not Assumptions.
             </h1>
 
@@ -269,7 +269,7 @@ const assessmentPath = isAuthenticated
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
                 href={assessmentPath}
-                className="rounded-[1px] bg-blue-600 px-5 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-blue-700"
+                className="rounded-[1px] bg-[#0089FA] px-5 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#002990]"
               >
                 Start Your Assessment
               </a>
@@ -353,8 +353,8 @@ const assessmentPath = isAuthenticated
                   <div
                     className={`mb-5 flex h-9 w-9 items-center justify-center border  text-[12px] font-semibold ${
                       index === 3
-                        ? "border-slate-900 bg-slate-900 text-white"
-                        : "border-slate-300 bg-white text-slate-900"
+                        ? "border-slate-900 bg-gradient-to-r from-[#5CC7FA] via-[#0089FA] to-[#002990] bg-clip-text text-transparent"
+                        : "border-slate-300 bg-gradient-to-r from-[#5CC7FA] via-[#0089FA] to-[#002990] bg-clip-text text-transparent"
                     }`}
                   >
                     {step.number}
@@ -381,11 +381,10 @@ const assessmentPath = isAuthenticated
           </div>
 
           <div className="mt-12 flex items-start gap-3 border-t border-slate-100 pt-5 text-[12px] leading-relaxed text-black-500">
-            
             <p>
-              CheckRail operates strictly as a decision-support and
-              verification engine. No live merchant funds or production
-              credentials are ever ingested.
+              CheckRail operates strictly as a decision-support and verification
+              engine. No live merchant funds or production credentials are ever
+              ingested.
             </p>
           </div>
         </div>
@@ -446,8 +445,8 @@ const assessmentPath = isAuthenticated
                   <strong className="text-black-900">
                     Country Intelligence Bypassed:
                   </strong>{" "}
-                  This assessment focuses on payment-processing behavior
-                  rather than target-country expansion requirements.
+                  This assessment focuses on payment-processing behavior rather
+                  than target-country expansion requirements.
                 </div>
               </div>
 
@@ -479,8 +478,8 @@ const assessmentPath = isAuthenticated
 
                 <p className="mt-2 text-[13px] leading-relaxed text-black-600">
                   Evaluates marketplace expansion into a target country using
-                  statutory country requirements and actual Hyperwallet
-                  Sandbox evidence.
+                  statutory country requirements and actual Hyperwallet Sandbox
+                  evidence.
                 </p>
 
                 <div className="mt-6 border-t border-slate-100 pt-5">
@@ -514,9 +513,7 @@ const assessmentPath = isAuthenticated
               </div>
 
               <div className="mt-7 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4  text-[10px]">
-                <span className="text-black-500">
-                  Target Market: Canada
-                </span>
+                <span className="text-black-500">Target Market: Canada</span>
                 <span className="font-medium text-amber-700">
                   EXPANSION ASSESSMENT
                 </span>
@@ -545,9 +542,7 @@ const assessmentPath = isAuthenticated
                 Target: Canada (CAD) Marketplace Expansion
               </span>
               <span className="hidden text-black-300 sm:inline">|</span>
-              <span className=" text-black-500">
-                Report #EXP-9942
-              </span>
+              <span className=" text-black-500">Report #EXP-9942</span>
             </div>
 
             <div className="flex flex-wrap gap-4  text-[10px]">
@@ -615,9 +610,7 @@ const assessmentPath = isAuthenticated
 
                     <td className="whitespace-nowrap px-4 py-4  text-[10px] text-black-500">
                       {finding.evidence}
-                      <p className="mt-1 text-black-400">
-                        {finding.reference}
-                      </p>
+                      <p className="mt-1 text-black-400">{finding.reference}</p>
                     </td>
 
                     <td className="max-w-xs py-4 pl-4 text-[11px] leading-relaxed text-black-600">
@@ -649,7 +642,7 @@ const assessmentPath = isAuthenticated
             className="mb-10"
           />
 
-          <div className="overflow-hidden border border-slate-300 bg-white">
+          <div className="overflow-hidden border border-[#002990] bg-white">
             <div className="flex flex-col justify-between gap-3 border-b border-black-100 p-5 sm:flex-row sm:items-center sm:p-6">
               <div>
                 <h3 className="text-[14px] font-semibold text-slate-900">
@@ -727,13 +720,13 @@ const assessmentPath = isAuthenticated
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-white py-24 md:py-32">
-        <div className="mx-auto flex max-w-4xl flex-col items-center px-6 text-center sm:px-8">
+      <section className="bg-white py-24 md:py-32 w-full">
+        <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center sm:px-8">
           <p className="mb-4  text-[10px] font-medium uppercase tracking-wider text-black-400">
             Ready For Evaluation
           </p>
 
-          <h2 className="max-w-4xl font-display text-[40px] font-normal leading-tight tracking-[-0.03em] text-slate-950 sm:text-[42px]">
+          <h2 className="max-w-7xl font-display text-[40px] bg-gradient-to-r from-[#002990] via-[#0089FA] to-[#5CC7FA] bg-clip-text text-transparent font-medium leading-tight tracking-[-0.03em] text-black sm:text-[60px]">
             Make Your Next Expansion an Evidence-Based Decision.
           </h2>
 
@@ -744,8 +737,8 @@ const assessmentPath = isAuthenticated
           </p>
 
           <a
-           href={assessmentPath}
-            className="mt-8 rounded-[3px] bg-slate-950 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-slate-800"
+            href={assessmentPath}
+            className="mt-8 rounded-[3px] bg-black px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white hover:text-black border border-black"
           >
             Start Your Assessment
           </a>

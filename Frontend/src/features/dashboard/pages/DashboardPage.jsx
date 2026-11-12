@@ -216,10 +216,10 @@ const DashboardPage = () => {
         <header className="border-b border-slate-200 pb-5">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <div className="flex items-center gap-2 text-[10px] font-normal uppercase tracking-wider text-slate-500">
+              <div className="flex items-center gap-2 text-[10px] font-normal uppercase tracking-wider text-[#0089FA]">
                 <span>Workspace</span>
                 <span className="text-slate-300">/</span>
-                <span className="text-indigo-600">Dashboard</span>
+                <span className="text-[#0089FA]">Dashboard</span>
               </div>
 
               <h1 className="mt-2 text-2xl font-medium tracking-tight text-slate-900">

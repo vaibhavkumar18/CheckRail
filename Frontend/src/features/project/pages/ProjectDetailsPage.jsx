@@ -175,7 +175,7 @@ function ModuleTabs({ tabs, activeTab, onChange }) {
                             onClick={() => onChange(tab.id)}
                             className={`relative flex items-center gap-2 whitespace-nowrap pb-3 text-sm transition ${
                                 active
-                                    ? "font-semibold text-indigo-700"
+                                    ? "font-semibold text-[#0089FA]"
                                     : "font-medium text-black-600 hover:text-black-900"
                             }`}
                         >
@@ -188,7 +188,7 @@ function ModuleTabs({ tabs, activeTab, onChange }) {
                                 {tab.count}
                             </span>
                             {active && (
-                                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-indigo-600" />
+                                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#0089FA]" />
                             )}
                         </button>
                     );
